@@ -20,7 +20,7 @@ module Mail
       end
 
       def self.encode(str)
-        ::Mail::Utilities.binary_unsafe_to_crlf(Utilities.encode_base64(str))
+        ::Mail::Utilities.binary_unsafe_to_crlf(Base64.encode64(str))
       end
 
       # 3 bytes in -> 4 bytes out
